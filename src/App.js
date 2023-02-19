@@ -1,7 +1,83 @@
 import "./App.css";
 
 function App() {
+
+  let users = [
+    {
+      id: 1,
+      firstName: "Henry",
+      lastName: "Martins",
+      age: 24,
+      birth: "2/05/2001",
+      gender: "male",
+      task1: 10,
+      task2: 6,
+      grade: 16,
+    },
+    {
+      id: 2,
+      firstName: "james",
+      lastName: "Ugo",
+      age: 20,
+      birth: "5/08/1998",
+      gender: "male",
+      task1: 9,
+      task2: 8,
+      grade: 17,
+    },
+    
+    {
+      id: 3,
+      firstName: "gabriel",
+      lastName: "John",
+      age: 23,
+      birth: "9/12/2000",
+      gender: "male",
+      task1: 5,
+      task2: 6,
+      grade: 11,
+    },
+    
+    {
+      id: 4,
+      firstName: "Chioma",
+      lastName: "Okorie",
+      age: 26,
+      birth: "12/11/2004",
+      gender: "female",
+      task1: 9,
+      task2: 9,
+      grade: 18,
+    },
+    
+    {
+      id: 5,
+      firstName: "Joshua",
+      lastName: "Monday",
+      age: 19,
+      birth: "6/10/1999",
+      gender: "male",
+      task1: 5,
+      task2: 4,
+      grade: 9,
+    },
+    
+    {
+      id: 6,
+      firstName: "Okezie",
+      lastName: "Oko",
+      age: 22,
+      birth: "23/08/1987",
+      gender: "male",
+      task1: 9,
+      task2: 10,
+      grade: 19,
+    },
+    
+  ];
+
   return (
+    
     <div className="content-table">
       <table>
         <thead>
@@ -19,77 +95,19 @@ function App() {
         </thead>
 
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Henry</td>
-            <td>Martins</td>
-            <td>19</td>
-            <td>2/05/2001</td>
-            <td>male</td>
-            <td>10</td>
-            <td>6</td>
-            <td>16</td>
-          </tr>
-
-          <tr>
-            <td>2</td>
-            <td>James</td>
-            <td>Ugo</td>
-            <td>15</td>
-            <td>5/08/1998</td>
-            <td>male</td>
-            <td>9</td>
-            <td>6</td>
-            <td>15</td>
-          </tr>
-
-          <tr>
-            <td>3</td>
-            <td>Gabriel</td>
-            <td>John</td>
-            <td>20</td>
-            <td>8/07/1987</td>
-            <td>male</td>
-            <td>8</td>
-            <td>4</td>
-            <td>12</td>
-          </tr>
-
-          <tr>
-            <td>4</td>
-            <td>Chioma</td>
-            <td>Okorie</td>
-            <td>19</td>
-            <td>9/09/2000</td>
-            <td>female</td>
-            <td>8</td>
-            <td>9</td>
-            <td>17</td>
-          </tr>
-
-          <tr>
-            <td>5</td>
-            <td>Joshua</td>
-            <td>Monday</td>
-            <td>19</td>
-            <td>10/04/2003</td>
-            <td>male</td>
-            <td>10</td>
-            <td>8</td>
-            <td>18</td>
-          </tr>
-
-          <tr>
-            <td>6</td>
-            <td>Okezie</td>
-            <td>Oko</td>
-            <td>19</td>
-            <td>9/09/2004</td>
-            <td>male</td>
-            <td>9</td>
-            <td>10</td>
-            <td>19</td>
-          </tr>
+          {users.map(user => {
+            return <tr>
+              <td>{user.id}</td>
+              <td>{user.firstName}</td>
+              <td>{user.lastName}</td>
+              <td>{user.age}</td>
+              <td>{user.birth}</td>
+              <td>{user.gender}</td>
+              <td>{user.task1}</td>
+              <td>{user.task2}</td>
+              <td>{user.grade}</td>
+            </tr>
+          })}
         </tbody>
       </table>
     </div>
